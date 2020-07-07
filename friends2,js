@@ -1,0 +1,64 @@
+
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+ 
+
+var friends1 = ["Mari","MaryJane","CaptianAmerica","Munnabai","Jeff","AAK chandran"];
+var friends2 = ["Gabbar","Rajinikanth","Mass","Spiderman","Jeff","ET"];
+let friends3 = [];
+let arr =[];
+arr1 = [];
+arr2=[];
+function dataHandling(input){
+ friends3 = input.concat(friends2);
+for(let ind=0;ind<friends3.length;ind++)
+{
+     arr = friends3[ind].split('');
+     arr2[ind]=arr.length;
+    if(arr.includes('a')||arr.includes('m'))
+    {
+       arr1.push(friends3[ind]); 
+    }
+}
+}
+dataHandling(friends1);
+let sum = 0;
+let max = arr2[0];
+let min = arr2[0];
+
+
+for(let inx=1;inx<arr2.length;inx++)
+{
+   if(arr2[inx]>max)
+   max = inx;
+}
+for(let inx=1;inx<arr2.length;inx++)
+{
+   if(arr2[inx]<min)
+   min = inx;
+}
+
+
+console.log(arr1);
+for(let inx=0;inx<arr2.length;inx++)
+{
+   sum = sum+arr2[inx];
+}
+let avg = sum/arr2.length;
+console.log(avg);
+console.log(friends3[max],friends3[min]);
+console.log(arr2);
+
+
+});
