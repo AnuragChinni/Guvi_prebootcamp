@@ -19,10 +19,9 @@ let arr=[];
 let as ="*";
 for(let ind=1;ind<=rows;ind++)
 {
-    for(let inx=7;inx<=columns;inx++)
-    {
+   
         arr.push(as);
         console.log(arr.join(' '));
     }
-}
+
 });
